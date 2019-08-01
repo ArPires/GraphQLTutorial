@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://testuser:test@gql-db-rskwf.mongodb.net/test?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://testuser:test@gql-db-rskwf.mongodb.net/test?retryWrites=true&w=majority', {useNewUrlParser: true})
 mongoose.connection.once('open', () => {
     console.log('connected to database');
 })
